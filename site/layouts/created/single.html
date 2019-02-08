@@ -1,0 +1,31 @@
+{{ define "main" }}
+	{{ partial "stats" . }}
+
+	<div class="wrap wrap--content content insulate">
+		{{ .Content }}
+	</div>
+
+	{{ if .Params.collage }}
+		<figure class="collage-image">
+			<div class="wrap">
+				<img src="images/created/{{ .Params.collage }}">
+			</div>
+		</figure>
+	{{ end }}
+
+	{{ if .Params.fullImage }}
+		<img class="full-image" src="images/created/{{ .Params.fullImage }}">
+	{{ end}}
+	
+	{{ if .Params.images }}
+		<figure class="project-image">
+			<div class="wrap">
+				{{ range .Params.images }}
+					<img src="images/created/{{ . }}">
+				{{ end }}
+			</div>
+		</figure>
+	{{ end }}
+
+	{{ partial "related" . }}
+{{ end }}

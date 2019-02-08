@@ -1,0 +1,12 @@
+baseurl = "/"
+languageCode = "en-gb"
+languageLang = "en"
+title = "Rack it All Resale"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+disableKinds = ["taxonomyTerm"]
+[Taxonomies]
+category = "thinks/categories"
+[permalinks]
+  categories = "thinks/categories/:slug/"

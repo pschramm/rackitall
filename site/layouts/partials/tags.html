@@ -1,0 +1,5 @@
+{{ if index .Params "thinks/categories" }}
+  {{ range first 1 (index .Params "thinks/categories") }}
+    <a href="thinks/categories/{{ . | urlize }}/">{{ . | humanize }}</a>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,124 @@
+html {
+	background: #000;
+}
+
+.bw {
+	background: #000;
+	color: #FFF;
+}
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	 -webkit-font-smoothing: antialiased;
+	background: #FFF;
+	color: $grey;
+	line-height: 1.8;
+	font-size: 16px;
+}
+
+h1,
+.top-nav {
+	letter-spacing: -.02em;
+	font-size: calc( 30px + 44 * (100vw - 320px) / (1200 - 320) );
+	font-weight: 700;
+	line-height: 1.3em;
+
+	@include mq(1200px) {
+		font-size: 72px;
+	}
+}
+
+h1 {
+	margin: 0 0 14px;
+
+	small {
+		line-height: 1;
+		font-size: 16px;
+	}
+}
+
+h2 {
+	letter-spacing: -.05em;
+	line-height: 1.3125;
+	font-size: 2.4em;
+	margin: 0 0 .2em;
+	color: $black;
+}
+
+h3 {
+	line-height: 1.454;
+	font-size: 1em;
+	margin: 0 0 .45em;
+}
+
+h6 {
+	margin: 0 0 0.25em;
+	font-size: 1em;
+}
+
+p {
+	margin: 0 0 1.6em;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.center {
+	text-align: center;
+}
+
+figcaption {
+	font-weight: 700;
+	font-size: 14px;
+	margin: 5px 0 30px;
+}
+
+@include mq(40em) {
+	body {
+		font-size: 18px;
+	}
+}
+
+@include mq(50em) {
+	body {
+		font-size: 20px;
+	}
+}
+
+blockquote {
+	p {
+		font-weight: 700;
+		letter-spacing: 0;
+		line-height: 1.3125;
+		font-size: 1.6em;
+		margin-bottom: 1.1625em;
+
+		.content & a:not(.button) {
+			font-weight: 700;
+		}
+	}
+
+	cite {
+		font-style: normal;
+		font-size: 14px;
+
+		@include mq(40em) {
+			font-size: 16px;
+		}
+	}
+}
+
+code {
+	font-size: 0.875em;
+}
+
+pre {
+	max-width: 100%;
+	overflow: auto;
+	margin: 1em 0 3em;
+	font-size: 0.9em;
+	padding: 1em;
+	line-height: 1.3;
+}
